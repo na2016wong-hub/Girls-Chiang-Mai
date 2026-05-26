@@ -3,180 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Girls 8周年慶典 🌿 清邁小旅行</title>
+    <title>Girls 8周年 🌿 清邁小旅行</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #faf8f5; color: #44403c; padding-bottom: 100px; }
-        
-        /* Header Styling */
-        header { background-color: #e6ede8; padding: 30px 20px; text-align: center; border-bottom: 2px solid #6b8e76; border-radius: 0 0 30px 30px; }
-        .badge { display: inline-block; background: #ffffff; color: #065f46; font-size: 12px; font-weight: bold; padding: 4px 12px; border-radius: 20px; border: 1px solid #87a991; margin-bottom: 8px; }
-        h1 { font-size: 24px; color: #56725e; font-weight: 900; }
-        .sub-title { font-size: 14px; color: #6b8e76; margin-top: 5px; font-weight: bold; }
-        
-        /* Main Container */
-        main { max-width: 450px; margin: 20px auto; padding: 0 16px; }
-        
-        /* Cards Styling */
-        .hand-card { background: #ffffff; border: 2px solid #6b8e76; border-radius: 20px; box-shadow: 4px 4px 0px 0px #6b8e76; padding: 20px; margin-bottom: 20px; }
-        .card-title { font-size: 16px; font-weight: bold; color: #065f46; margin-bottom: 12px; display: flex; align-items: center; }
-        .info-p { font-size: 14px; line-height: 1.6; margin-bottom: 8px; }
-        .day-badge { display: inline-block; background: #87a991; color: white; font-size: 11px; font-weight: bold; padding: 2px 8px; border-radius: 6px; margin-bottom: 6px; }
-        
-        /* Tabs control */
+        body { font-family: sans-serif; background-color: #faf8f5; color: #44403c; padding-bottom: 80px; margin: 0; }
+        header { background: #e6ede8; padding: 20px; text-align: center; border-bottom: 2px solid #6b8e76; }
+        main { max-width: 450px; margin: 20px auto; padding: 0 15px; }
+        .card { background: #ffffff; border: 2px solid #6b8e76; border-radius: 15px; box-shadow: 3px 3px 0px #6b8e76; padding: 15px; margin-bottom: 15px; }
         .tab-content { display: none; }
-        .active-content { display: block; }
-        
-        /* Footer Nav Styling */
-        nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; background: #ffffff; border-top: 2px solid #6b8e76; display: flex; justify-content: space-around; padding: 10px 0 25px 0; z-index: 999; border-radius: 20px 20px 0 0; box-shadow: 0 -4px 10px rgba(0,0,0,0.05); }
-        .tab-btn { background: none; border: none; width: 25%; font-size: 11px; font-weight: bold; color: #a8a29e; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; }
-        .tab-btn.active-btn { color: #6b8e76; }
-        .icon-placeholder { font-size: 18px; }
-
-        /* Form styling for App features */
-        input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 10px; margin-bottom: 10px; font-size: 14px; }
-        button.action-btn { width: 100%; background: #87a991; color: white; border: 2px solid #56725e; padding: 10px; border-radius: 12px; font-weight: bold; cursor: pointer; box-shadow: 2px 2px 0px #56725e; }
-        .list-item { background: #f5f0e6; padding: 10px; border-radius: 10px; margin-top: 8px; font-size: 13px; display: flex; justify-content: space-between; font-weight: bold; }
+        .active { display: block; }
+        nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; background: #ffffff; border-top: 2px solid #6b8e76; display: flex; padding: 10px 0 20px 0; }
+        .tab-btn { background: none; border: none; width: 25%; font-size: 12px; font-weight: bold; color: #a8a29e; cursor: pointer; text-align: center; }
+        .tab-btn.btn-active { color: #6b8e76; font-size: 14px; }
+        input { width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ccc; border-radius: 8px; }
+        button { width: 100%; background: #87a991; color: white; border: 1px solid #56725e; padding: 8px; border-radius: 8px; font-weight: bold; }
+        .item { background: #f5f0e6; padding: 8px; border-radius: 8px; margin-top: 5px; font-size: 12px; display: flex; justify-content: space-between; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="badge">🌿 Premium Trip</div>
-        <h1>Girls 8周年慶典^_^</h1>
-        <div class="sub-title">Chiang Mai · 清邁小旅行</div>
+        <h1 style="font-size:20px; color:#56725e;">Girls 8周年慶典 🌿</h1>
+        <p style="font-size:12px; color:#6b8e76; margin-top:4px;">Chiang Mai · 清邁小旅行</p>
     </header>
 
     <main>
-        
-        <div id="tab-overview" class="tab-content active-content">
-            <div class="hand-card">
-                <div class="card-title">✈️ 航班資訊 Flight Info</div>
-                <p class="info-p"><strong>去程：</strong>UO738 (June 5)<br>⏰ 07:50 ➔ 09:45</p>
-                <p class="info-p" style="margin-top: 10px;"><strong>回程：</strong>UO755 (June 7)<br>⏰ 19:25 ➔ 23:15</p>
+        <div id="tab-overview" class="tab-content active">
+            <div class="card">
+                <p><strong>✈️ 航班資訊 Info</strong></p>
+                <p style="font-size:13px; margin-top:5px;">去程：UO738 (June 5) ➔ 07:50 - 09:45</p>
+                <p style="font-size:13px;">回程：UO755 (June 7) ➔ 19:25 - 23:15</p>
             </div>
-            <div class="hand-card">
-                <div class="card-title">🏨 酒店住宿 Stay</div>
-                <p class="info-p"><strong>Day 1：</strong>Chai Cheevit Mae Sa<br><span style="color:#78716c; font-size:12px;">📍 Mae Rim District, Chiang Mai</span></p>
-                <p class="info-p" style="margin-top: 12px;"><strong>Day 2：</strong>Villa Alanna<br><span style="color:#78716c; font-size:12px;">📍 Si Phum, Mueang Chiang Mai</span></p>
+            <div class="card">
+                <p><strong>🏨 酒店住宿 Stay</strong></p>
+                <p style="font-size:13px; margin-top:5px;">D1：Chai Cheevit Mae Sa (梅林區)</p>
+                <p style="font-size:13px;">D2：Villa Alanna (古城區)</p>
             </div>
         </div>
 
         <div id="tab-itinerary" class="tab-content">
-            <div class="hand-card">
-                <span class="day-badge">Day 1</span>
-                <p class="info-p" style="font-weight: bold;">落機 ➔ 食 ➔ Spa ➔ 山上酒店</p>
-                <p class="info-p" style="font-size: 13px; color:#57534e;">09:45 落機 ➔ Lunch (It's Good Kitchen) ➔ Makkha Health & Spa 放鬆 ➔ 直奔上山返酒店享受風景與泳池。</p>
+            <div class="card">
+                <p style="color:#87a991; font-weight:bold;">📍 Day 1</p>
+                <p style="font-size:13px; margin-top:5px;">落機 ➔ Lunch ➔ Makkha Spa 放鬆 ➔ 直奔上山返酒店享受風景與泳池。</p>
             </div>
-            <div class="hand-card">
-                <span class="day-badge">Day 2</span>
-                <p class="info-p" style="font-weight: bold;">山區 ➔ Check-in ➔ Fine Dine ➔ 夜市</p>
-                <p class="info-p" style="font-size: 13px; color:#57534e;">Mon Jam 絕美山景 ➔ Villa Check-in ➔ Baan Landai 精緻泰菜 ➔ Jing Jai Market 手作市集 ➔ CMU 大學夜市掃街！</p>
+            <div class="card">
+                <p style="color:#6b8e76; font-weight:bold;">📍 Day 2</p>
+                <p style="font-size:13px; margin-top:5px;">Mon Jam 絕美山景 ➔ Villa Check-in ➔ Baan Landai 精緻泰菜 ➔ JJ Market 手作市集 ➔ CMU 大學夜市掃街！</p>
             </div>
-            <div class="hand-card">
-                <span class="day-badge">Day 3</span>
-                <p class="info-p" style="font-weight: bold;">泰北麵 ➔ 攞行李 ➔ 機場</p>
-                <p class="info-p" style="font-size: 13px; color:#57534e;">朝聖 GRAPH 咖啡 ➔ Khao Soi Maesai 泰北金麵 ➔ 返酒店攞行李 ➔ 17:00 出發前往機場。</p>
+            <div class="card">
+                <p style="color:#56725e; font-weight:bold;">📍 Day 3</p>
+                <p style="font-size:13px; margin-top:5px;">朝聖 GRAPH 咖啡 ➔ Khao Soi Maesai 泰北金麵 ➔ 返酒店攞行李 ➔ 17:00 出發去機場。</p>
             </div>
         </div>
 
         <div id="tab-expenses" class="tab-content">
-            <div class="hand-card">
-                <div class="card-title">💰 公數記帳小幫手</div>
-                <input type="text" id="exp-title" placeholder="項目名稱 (如：第一餐泰菜)">
+            <div class="card">
+                <p><strong>💰 公數記帳小幫手 (5人平分)</strong></p>
+                <input type="text" id="exp-title" placeholder="項目名稱" style="margin-top:10px;">
                 <input type="number" id="exp-amount" placeholder="金額 (THB ฿)">
-                <button class="action-btn" id="btn-add-expense">新增帳目</button>
-                
-                <div style="margin-top: 15px; padding: 12px; background: #f0fdf4; border-radius: 12px; text-align: center; border: 1px solid #87a991;">
-                    <p style="font-size: 14px; font-weight: bold;">總支出: <span id="total-amount" style="color:#065f46; font-size:18px;">฿0</span></p>
-                    <p style="font-size: 12px; color:#6b8e76; margin-top: 4px;">每人平分 (5人): <span id="per-person" style="font-weight: bold;">฿0</span></p>
+                <button id="btn-add-expense">新增帳目</button>
+                <div style="margin-top:10px; padding:10px; background:#f0fdf4; text-align:center; border-radius:8px;">
+                    <p style="font-size:13px;">總支出: <span id="total-amount" style="color:#065f46; font-weight:bold;">฿0</span></p>
+                    <p style="font-size:11px; color:#6b8e76;">每人平分: <span id="per-person">฿0</span></p>
                 </div>
-                <div id="expense-list" style="margin-top: 15px;"></div>
+                <div id="expense-list"></div>
             </div>
         </div>
 
         <div id="tab-memo" class="tab-content">
-            <div class="hand-card">
-                <div class="card-title">📝 備忘 / 打包清單</div>
-                <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-                    <input type="text" id="memo-input" placeholder="新增物品..." style="margin-bottom:0;">
-                    <button class="action-btn" id="btn-add-memo" style="width: auto; padding: 0 20px;">新增</button>
+            <div class="card">
+                <p><strong>📋 備忘 / 打包清單</strong></p>
+                <div style="display:flex; gap:5px; margin:10px 0;">
+                    <input type="text" id="memo-input" placeholder="新增物品..." style="margin:0;">
+                    <button id="btn-add-memo" style="width:auto; padding:0 15px;">新增</button>
                 </div>
                 <div id="memo-list"></div>
             </div>
         </div>
-
     </main>
 
     <nav>
-        <button id="nav-overview" class="tab-btn active-btn">
-            <span class="icon-placeholder">🧭</span><span>總覽</span>
-        </button>
-        <button id="nav-itinerary" class="tab-btn">
-            <span class="icon-placeholder">📅</span><span>行程</span>
-        </button>
-        <button id="nav-expenses" class="tab-btn">
-            <span class="icon-placeholder">💵</span><span>記帳</span>
-        </button>
-        <button id="nav-memo" class="tab-btn">
-            <span class="icon-placeholder">📋</span><span>清單</span>
-        </button>
+        <button id="nav-overview" class="tab-btn btn-active">🧭 總覽</button>
+        <button id="nav-itinerary" class="tab-btn">📅 行程</button>
+        <button id="nav-expenses" class="tab-btn">💵 記帳</button>
+        <button id="nav-memo" class="tab-btn">📋 清單</button>
     </nav>
 
     <script>
         const btns = document.querySelectorAll('.tab-btn');
         const pages = document.querySelectorAll('.tab-content');
-
         btns.forEach(btn => {
             btn.addEventListener('click', function() {
-                // 1. 隱藏所有頁面
-                pages.forEach(p => p.classList.remove('active-content'));
-                // 2. 還原所有按鈕狀態
-                btns.forEach(b => b.classList.remove('active-btn'));
-
-                // 3. 顯示對應頁面
+                pages.forEach(p => p.classList.remove('active'));
+                btns.forEach(b => b.classList.remove('btn-active'));
                 const id = this.id;
-                if (id === 'nav-overview') document.getElementById('tab-overview').classList.add('active-content');
-                if (id === 'nav-itinerary') document.getElementById('tab-itinerary').classList.add('active-content');
-                if (id === 'nav-expenses') document.getElementById('tab-expenses').classList.add('active-content');
-                if (id === 'nav-memo') document.getElementById('tab-memo').classList.add('active-content');
-
-                // 4. 高亮目前的按鈕
-                this.classList.add('active-btn');
+                if (id === 'nav-overview') document.getElementById('tab-overview').classList.add('active');
+                if (id === 'nav-itinerary') document.getElementById('tab-itinerary').classList.add('active');
+                if (id === 'nav-expenses') document.getElementById('tab-expenses').classList.add('active');
+                if (id === 'nav-memo') document.getElementById('tab-memo').classList.add('active');
+                this.classList.add('btn-active');
                 window.scrollTo({ top: 0 });
             });
         });
 
-        // 記帳核心
         let expenses = [];
         document.getElementById('btn-add-expense').addEventListener('click', function() {
             const title = document.getElementById('exp-title').value;
             const amount = parseFloat(document.getElementById('exp-amount').value);
             if(!title || !amount) return;
-            
             expenses.push({title, amount});
-            document.getElementById('expense-list').innerHTML += <div class="list-item"><span>📍 ${title}</span><span>฿${amount}</span></div>;
-            
-            let total = 0; 
-            expenses.forEach(i => total += i.amount);
+            document.getElementById('expense-list').innerHTML += <div class="item"><span>📍 ${title}</span><span>฿${amount}</span></div>;
+            let total = 0; expenses.forEach(i => total += i.amount);
             document.getElementById('total-amount').innerText = '฿' + total;
             document.getElementById('per-person').innerText = '฿' + (total / 5).toFixed(0);
-            
-            document.getElementById('exp-title').value = '';
-            document.getElementById('exp-amount').value = '';
+            document.getElementById('exp-title').value = ''; document.getElementById('exp-amount').value = '';
         });
 
-        // 備忘清單核心
         let mList = document.getElementById('memo-list');
-        ['帶防蚊液 🦟', '換泰銖現金 ฿', '填寫電子入境卡 📝'].forEach(m => {
-            mList.innerHTML += <div class="list-item"><span>📌 ${m}</span></div>;
-        });
+        ['帶防蚊液 🦟', '換泰銖現金 ฿'].forEach(m => mList.innerHTML += <div class="item"><span>📌 ${m}</span></div>);
         document.getElementById('btn-add-memo').addEventListener('click', function() {
             const input = document.getElementById('memo-input');
             if(!input.value.trim()) return;
-            mList.innerHTML += <div class="list-item"><span>📌 ${input.value.trim()}</span></div>;
+            mList.innerHTML += <div class="item"><span>📌 ${input.value.trim()}</span></div>;
             input.value = '';
         });
     </script>
 </body>
 </html>
+
+
+
+                        
