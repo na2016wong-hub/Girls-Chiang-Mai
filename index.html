@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Girls 8周年 🌿 清邁小旅行</title>
     <style>
+        * { box-sizing: border-box; }
         body { font-family: sans-serif; background-color: #faf8f5; color: #44403c; padding-bottom: 80px; margin: 0; }
         header { background: #e6ede8; padding: 20px; text-align: center; border-bottom: 2px solid #6b8e76; }
         main { max-width: 450px; margin: 20px auto; padding: 0 15px; }
         .card { background: #ffffff; border: 2px solid #6b8e76; border-radius: 15px; box-shadow: 3px 3px 0px #6b8e76; padding: 15px; margin-bottom: 15px; }
-        .tab-content { display: none; }
-        .active { display: block; }
-        nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; background: #ffffff; border-top: 2px solid #6b8e76; display: flex; padding: 10px 0 20px 0; }
+        nav { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 450px; background: #ffffff; border-top: 2px solid #6b8e76; display: flex; padding: 15px 0 25px 0; }
         .tab-btn { background: none; border: none; width: 25%; font-size: 12px; font-weight: bold; color: #a8a29e; cursor: pointer; text-align: center; }
         .tab-btn.btn-active { color: #6b8e76; font-size: 14px; }
         input { width: 100%; padding: 8px; margin-bottom: 8px; border: 1px solid #ccc; border-radius: 8px; }
-        button { width: 100%; background: #87a991; color: white; border: 1px solid #56725e; padding: 8px; border-radius: 8px; font-weight: bold; }
+        button { width: 100%; background: #87a991; color: white; border: 1px solid #56725e; padding: 8px; border-radius: 8px; font-weight: bold; cursor: pointer; }
         .item { background: #f5f0e6; padding: 8px; border-radius: 8px; margin-top: 5px; font-size: 12px; display: flex; justify-content: space-between; }
     </style>
 </head>
@@ -27,7 +26,7 @@
     </header>
 
     <main>
-        <div id="tab-overview" class="tab-content active">
+        <div id="tab-overview" style="display: block;">
             <div class="card">
                 <p><strong>✈️ 航班資訊 Info</strong></p>
                 <p style="font-size:13px; margin-top:5px;">去程：UO738 (June 5) ➔ 07:50 - 09:45</p>
@@ -40,7 +39,7 @@
             </div>
         </div>
 
-        <div id="tab-itinerary" class="tab-content">
+        <div id="tab-itinerary" style="display: none;">
             <div class="card">
                 <p style="color:#87a991; font-weight:bold;">📍 Day 1</p>
                 <p style="font-size:13px; margin-top:5px;">落機 ➔ Lunch ➔ Makkha Spa 放鬆 ➔ 直奔上山返酒店享受風景與泳池。</p>
@@ -55,7 +54,7 @@
             </div>
         </div>
 
-        <div id="tab-expenses" class="tab-content">
+        <div id="tab-expenses" style="display: none;">
             <div class="card">
                 <p><strong>💰 公數記帳小幫手 (5人平分)</strong></p>
                 <input type="text" id="exp-title" placeholder="項目名稱" style="margin-top:10px;">
@@ -69,7 +68,7 @@
             </div>
         </div>
 
-        <div id="tab-memo" class="tab-content">
+        <div id="tab-memo" style="display: none;">
             <div class="card">
                 <p><strong>📋 備忘 / 打包清單</strong></p>
                 <div style="display:flex; gap:5px; margin:10px 0;">
@@ -89,22 +88,53 @@
     </nav>
 
     <script>
-        const btns = document.querySelectorAll('.tab-btn');
-        const pages = document.querySelectorAll('.tab-content');
-        btns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                pages.forEach(p => p.classList.remove('active'));
-                btns.forEach(b => b.classList.remove('btn-active'));
-                const id = this.id;
-                if (id === 'nav-overview') document.getElementById('tab-overview').classList.add('active');
-                if (id === 'nav-itinerary') document.getElementById('tab-itinerary').classList.add('active');
-                if (id === 'nav-expenses') document.getElementById('tab-expenses').classList.add('active');
-                if (id === 'nav-memo') document.getElementById('tab-memo').classList.add('active');
-                this.classList.add('btn-active');
-                window.scrollTo({ top: 0 });
-            });
+        const btnOverview = document.getElementById('nav-overview');
+        const btnItinerary = document.getElementById('nav-itinerary');
+        const btnExpenses = document.getElementById('nav-expenses');
+        const btnMemo = document.getElementById('nav-memo');
+
+        const tabOverview = document.getElementById('tab-overview');
+        const tabItinerary = document.getElementById('tab-itinerary');
+        const tabExpenses = document.getElementById('tab-expenses');
+        const tabMemo = document.getElementById('tab-memo');
+
+        function clearAll() {
+            tabOverview.style.display = 'none';
+            tabItinerary.style.display = 'none';
+            tabExpenses.style.display = 'none';
+            tabMemo.style.display = 'none';
+
+            btnOverview.classList.remove('btn-active');
+            btnItinerary.classList.remove('btn-active');
+            btnExpenses.classList.remove('btn-active');
+            btnMemo.classList.remove('btn-active');
+        }
+
+        btnOverview.addEventListener('click', function() {
+            clearAll();
+            tabOverview.style.display = 'block';
+            btnOverview.classList.add('btn-active');
         });
 
+        btnItinerary.addEventListener('click', function() {
+            clearAll();
+            tabItinerary.style.display = 'block';
+            btnItinerary.classList.add('btn-active');
+        });
+
+        btnExpenses.addEventListener('click', function() {
+            clearAll();
+            tabExpenses.style.display = 'block';
+            btnExpenses.classList.add('btn-active');
+        });
+
+        btnMemo.addEventListener('click', function() {
+            clearAll();
+            tabMemo.style.display = 'block';
+            btnMemo.classList.add('btn-active');
+        });
+
+        // 記帳小功能
         let expenses = [];
         document.getElementById('btn-add-expense').addEventListener('click', function() {
             const title = document.getElementById('exp-title').value;
@@ -118,6 +148,7 @@
             document.getElementById('exp-title').value = ''; document.getElementById('exp-amount').value = '';
         });
 
+        // 清單功能
         let mList = document.getElementById('memo-list');
         ['帶防蚊液 🦟', '換泰銖現金 ฿'].forEach(m => mList.innerHTML += <div class="item"><span>📌 ${m}</span></div>);
         document.getElementById('btn-add-memo').addEventListener('click', function() {
@@ -129,7 +160,3 @@
     </script>
 </body>
 </html>
-
-
-
-                        
