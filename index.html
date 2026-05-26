@@ -16,174 +16,95 @@
     </style>
 </head>
 <body class="text-stone-700 bg-beige-50 min-h-screen pb-32">
-
     <header class="bg-sage-100 pt-8 pb-6 px-6 rounded-b-[40px] border-b-2 border-[#6b8e76] shadow-sm text-center">
         <span class="inline-block bg-white text-emerald-800 text-xs font-bold px-3 py-1 rounded-full border border-[#87a991] mb-2">🌿 Premium Trip</span>
         <h1 class="text-3xl font-black text-[#6b8e76] tracking-wide">Girls 8周年慶典</h1>
         <p class="text-sm text-[#6b8e76] mt-1 font-bold"><i class="fa-solid fa-location-dot mr-1"></i> Chiang Mai · 清邁小旅行</p>
     </header>
-
     <main class="max-w-md mx-auto px-4 mt-6">
-        
         <div id="tab-overview" class="tab-content space-y-6">
             <div class="bg-white hand-card p-5">
-                <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center">
-                    <i class="fa-solid fa-plane-departure mr-2 text-[#87a991]"></i> 航班資訊 Flight Info
-                </h3>
-                <div class="space-y-3">
-                    <p class="text-sm"><strong>去程：</strong>UO738 (June 5) ➔ 07:50 - 09:45</p>
-                    <p class="text-sm"><strong>回程：</strong>UO755 (June 7) ➔ 19:25 - 23:15</p>
-                </div>
+                <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center"><i class="fa-solid fa-plane-departure mr-2 text-[#87a991]"></i> 航班資訊 Flight Info</h3>
+                <p class="text-sm"><strong>去程：</strong>UO738 (June 5) ➔ 07:50 - 09:45</p>
+                <p class="text-sm class='mt-2'"><strong>回程：</strong>UO755 (June 7) ➔ 19:25 - 23:15</p>
             </div>
             <div class="bg-white hand-card p-5">
-                <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center">
-                    <i class="fa-solid fa-hotel mr-2 text-[#87a991]"></i> 酒店住宿 Stay
-                </h3>
+                <h3 class="text-lg font-bold text-emerald-800 mb-4 flex items-center"><i class="fa-solid fa-hotel mr-2 text-[#87a991]"></i> 酒店住宿 Stay</h3>
                 <p class="text-sm font-bold">D1: Chai Cheevit Mae Sa</p>
                 <p class="text-sm font-bold mt-2">D2: Villa Alanna</p>
             </div>
         </div>
-
         <div id="tab-itinerary" class="tab-content hidden space-y-4">
             <div class="bg-white hand-card p-5">
                 <h3 class="text-lg font-bold text-emerald-800 mb-2">Day 1 行程</h3>
-                <p class="text-sm">09:45 落機 ➔ Lunch (It's Good Kitchen) ➔ Makkha Spa ➔ 上山返酒店享受</p>
+                <p class="text-sm">09:45 落機 ➔ Lunch ➔ Makkha Spa ➔ 上山返酒店享受</p>
             </div>
             <div class="bg-white hand-card p-5">
                 <h3 class="text-lg font-bold text-emerald-800 mb-2">Day 2 行程</h3>
-                <p class="text-sm">Mon Jam 山景 ➔ Baan Landai 午餐 ➔ JJ Market ➔ CMU 大學夜市</p>
-            </div>
-            <div class="bg-white hand-card p-5">
-                <h3 class="text-lg font-bold text-emerald-800 mb-2">Day 3 行程</h3>
-                <p class="text-sm">GRAPH 咖啡 ➔ Khao Soi Maesai 金麵 ➔ 17:00 出發去機場</p>
+                <p class="text-sm">Mon Jam 山景 ➔ Baan Landai 午餐 ➔ JJ Market ➔ CMU 夜市</p>
             </div>
         </div>
-
         <div id="tab-expenses" class="tab-content hidden space-y-4">
             <div class="bg-white hand-card p-5">
                 <h3 class="text-lg font-bold text-emerald-800 mb-2">公數記帳小幫手</h3>
-                <div class="space-y-3 mt-4">
-                    <input type="text" id="exp-title" placeholder="項目名稱" class="w-full border p-2 rounded-xl text-sm">
-                    <input type="number" id="exp-amount" placeholder="金額 (THB ฿)" class="w-full border p-2 rounded-xl text-sm">
-                    <button id="btn-add-expense" class="w-full bg-[#87a991] text-white font-bold p-2.5 hand-btn text-sm">新增帳目</button>
-                </div>
+                <input type="text" id="exp-title" placeholder="項目名稱" class="w-full border p-2 rounded-xl text-sm mb-2">
+                <input type="number" id="exp-amount" placeholder="金額 (THB ฿)" class="w-full border p-2 rounded-xl text-sm mb-2">
+                <button id="btn-add-expense" class="w-full bg-[#87a991] text-white font-bold p-2 hand-btn text-sm">新增帳目</button>
                 <div class="mt-4 p-3 bg-emerald-50 rounded-xl text-center border border-[#87a991]">
                     <p class="text-xs font-bold">總支出: <span id="total-amount" class="text-lg text-emerald-800">฿0</span></p>
-                    <p class="text-xs font-bold mt-1">每人平分 (5人): <span id="per-person" class="text-lg text-emerald-800">฿0</span></p>
                 </div>
-                <div id="expense-list" class="mt-4 space-y-2 max-h-40 overflow-y-auto"></div>
+                <div id="expense-list" class="mt-4 space-y-2"></div>
             </div>
         </div>
-
         <div id="tab-memo" class="tab-content hidden space-y-4">
             <div class="bg-white hand-card p-5">
                 <h3 class="text-lg font-bold text-emerald-800 mb-2">備忘 / 打包清單</h3>
-                <div class="flex space-x-2 mt-4">
-                    <input type="text" id="memo-input" placeholder="新增備忘物品..." class="flex-1 border p-2 rounded-xl text-sm">
-                    <button id="btn-add-memo" class="bg-[#6b8e76] text-white font-bold px-4 rounded-xl text-sm hand-btn">新增</button>
-                </div>
+                <div class="flex space-x-2"><input type="text" id="memo-input" placeholder="新增物品..." class="flex-1 border p-2 rounded-xl text-sm"><button id="btn-add-memo" class="bg-[#6b8e76] text-white font-bold px-4 rounded-xl text-sm hand-btn">新增</button></div>
                 <div id="memo-list" class="mt-4 space-y-2"></div>
             </div>
         </div>
-
     </main>
-
     <nav class="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-[#6b8e76] shadow-lg px-4 pt-2 pb-6 flex justify-around z-50 max-w-md mx-auto rounded-t-3xl">
-        <button id="nav-overview" class="tab-trigger flex flex-col items-center text-[#6b8e76] font-bold w-1/4">
-            <i class="fa-solid fa-compass text-lg"></i><span class="text-[10px]">總覽</span>
-        </button>
-        <button id="nav-itinerary" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4">
-            <i class="fa-solid fa-calendar-days text-lg"></i><span class="text-[10px]">行程</span>
-        </button>
-        <button id="nav-expenses" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4">
-            <i class="fa-solid fa-wallet text-lg"></i><span class="text-[10px]">記帳</span>
-        </button>
-        <button id="nav-memo" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4">
-            <i class="fa-solid fa-clipboard-list text-lg"></i><span class="text-[10px]">清單</span>
-        </button>
+        <button id="nav-overview" class="tab-trigger flex flex-col items-center text-[#6b8e76] font-bold w-1/4"><i class="fa-solid fa-compass text-lg"></i><span class="text-[10px]">總覽</span></button>
+        <button id="nav-itinerary" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4"><i class="fa-solid fa-calendar-days text-lg"></i><span class="text-[10px]">行程</span></button>
+        <button id="nav-expenses" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4"><i class="fa-solid fa-wallet text-lg"></i><span class="text-[10px]">記帳</span></button>
+        <button id="nav-memo" class="tab-trigger flex flex-col items-center text-stone-400 w-1/4"><i class="fa-solid fa-clipboard-list text-lg"></i><span class="text-[10px]">清單</span></button>
     </nav>
-
     <script>
-        // 1. 分頁切換功能
         const triggers = document.querySelectorAll('.tab-trigger');
         const contents = document.querySelectorAll('.tab-content');
-
         triggers.forEach(trigger => {
             trigger.addEventListener('click', function() {
-                // 隱藏所有分頁
-                contents.forEach(content => content.classList.add('hidden'));
-                // 取消所有按鈕高亮
-                triggers.forEach(t => {
-                    t.classList.remove('text-[#6b8e76]', 'font-bold');
-                    t.classList.add('text-stone-400');
-                });
-
-                // 判斷點擊了哪一個
+                contents.forEach(c => c.classList.add('hidden'));
+                triggers.forEach(t => { t.classList.remove('text-[#6b8e76]', 'font-bold'); t.classList.add('text-stone-400'); });
                 const id = this.id;
-                if(id === 'nav-overview') {
-                    document.getElementById('tab-overview').classList.remove('hidden');
-                } else if(id === 'nav-itinerary') {
-                    document.getElementById('tab-itinerary').classList.remove('hidden');
-                } else if(id === 'nav-expenses') {
-                    document.getElementById('tab-expenses').classList.remove('hidden');
-                } else if(id === 'nav-memo') {
-                    document.getElementById('tab-memo').classList.remove('hidden');
-                }
-
-                // 高亮當前點擊的按鈕
-                this.classList.remove('text-stone-400');
-                this.classList.add('text-[#6b8e76]', 'font-bold');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if(id==='nav-overview') document.getElementById('tab-overview').classList.remove('hidden');
+                else if(id==='nav-itinerary') document.getElementById('tab-itinerary').classList.remove('hidden');
+                else if(id==='nav-expenses') document.getElementById('tab-expenses').classList.remove('hidden');
+                else if(id==='nav-memo') document.getElementById('tab-memo').classList.remove('hidden');
+                this.classList.remove('text-stone-400'); this.classList.add('text-[#6b8e76]', 'font-bold');
             });
         });
-
-        // 2. 簡單記帳邏輯
-        let expenses = JSON.parse(localStorage.getItem('c_exp')) || [];
-        function renderExp() {
-            const list = document.getElementById('expense-list');
-            const totalEl = document.getElementById('total-amount');
-            const perEl = document.getElementById('per-person');
-            let total = 0;
-            list.innerHTML = '';
-            expenses.forEach((item, index) => {
-                total += item.amount;
-                list.innerHTML += <div class="flex justify-between bg-stone-100 p-2 rounded-xl text-xs"><span>${item.title}</span><span class="font-bold text-emerald-700">฿${item.amount}</span></div>;
-            });
-            totalEl.innerText = '฿' + total;
-            perEl.innerText = '฿' + (total / 5).toFixed(0);
-        }
+        let expenses = [];
         document.getElementById('btn-add-expense').addEventListener('click', function() {
             const t = document.getElementById('exp-title').value;
             const a = parseFloat(document.getElementById('exp-amount').value);
             if(!t || !a) return;
             expenses.push({title: t, amount: a});
-            localStorage.setItem('c_exp', JSON.stringify(expenses));
-            document.getElementById('exp-title').value = '';
-            document.getElementById('exp-amount').value = '';
-            renderExp();
+            document.getElementById('expense-list').innerHTML += <div class="flex justify-between bg-stone-100 p-2 rounded-xl text-xs"><span>${t}</span><span>฿${a}</span></div>;
+            let total = 0; expenses.forEach(i => total+=i.amount);
+            document.getElementById('total-amount').innerText = '฿' + total;
+            document.getElementById('exp-title').value = ''; document.getElementById('exp-amount').value = '';
         });
-
-        // 3. 簡單清單邏輯
-        let memos = JSON.parse(localStorage.getItem('c_memo')) || ['帶防蚊液 🦟', '換泰銖 ฿'];
-        function renderMemo() {
-            const list = document.getElementById('memo-list');
-            list.innerHTML = '';
-            memos.forEach((item) => {
-                list.innerHTML += <div class="p-2.5 bg-stone-100 rounded-xl text-xs font-medium">📍 ${item}</div>;
-            });
-        }
+        let memos = ['帶防蚊液 🦟', '換泰銖 ฿'];
+        const mList = document.getElementById('memo-list');
+        memos.forEach(m => mList.innerHTML += <div class="p-2 bg-stone-100 rounded-xl text-xs">📍 ${m}</div>);
         document.getElementById('btn-add-memo').addEventListener('click', function() {
             const input = document.getElementById('memo-input');
             if(!input.value.trim()) return;
-            memos.push(input.value.trim());
-            localStorage.setItem('c_memo', JSON.stringify(memos));
+            mList.innerHTML += <div class="p-2 bg-stone-100 rounded-xl text-xs">📍 ${input.value.trim()}</div>;
             input.value = '';
-            renderMemo();
         });
-
-        // 初始化
-        renderExp();
-        renderMemo();
     </script>
 </body>
 </html>
