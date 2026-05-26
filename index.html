@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Girls 8周年慶典 🌿 清邁小旅行</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f5',
+                            100: '#e6ede8',
+                            200: '#ccdcd2',
+                            500: '#87a991',
+                            600: '#6b8e76',
+                            700: '#56725e',
+                        },
+                        beige: {
+                            50: '#faf8f5',
+                            100: '#f5f0e6',
+                            200: '#ebdcc5',
+                            300: '#dec5a1',
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Fredoka', 'sans-serif'],
+                        body: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #faf8f5;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .font-title {
+            font-family: 'Fredoka', 'Quicksand', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #87a991;
+            border-radius: 10px;
+        }
+        /* 輕微手繪風感的不規則陰影與邊框 */
+        .hand-card {
+            border: 2px solid #6b8e76;
+            border-radius: 24px;
+            box-shadow: 4px 4px 0px 0px #6b8e76;
+        }
+        .hand-btn {
+            border: 2px solid #56725e;
+            border-radius: 16px;
+            box-shadow: 2px 2px 0px 0px #56725e;
+            transition: all 0.1s ease;
+        }
+        .hand-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px #56725e;
+        }
+    </style>
+</head>
+<body class="text-stone-700 bg-beige-50 min-h-screen pb-24">
+
+    <!-- Header 頂部裝飾 -->
+    <header class="bg-sage-100 pt-8 pb-6 px-6 rounded-b-[40px] border-b-2 border-sage-600 shadow-sm text-center relative overflow-hidden">
+        <div class="absolute -top-10 -left-10 w-24 h-24 bg-sage-200 rounded-full opacity-40 blur-lg"></div>
+        <div class="absolute -bottom-6 -right-6 w-20 h-20 bg-beige-200 rounded-full opacity-50 blur-md"></div>
+        
+        <span class="inline-block bg-white text-sage-700 text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full border border-sage-500 mb-2 font-title shadow-sm">🌿 Premium Trip</span>
+        <h1 class="text-3xl font-title font-bold text-sage-700 tracking-wide">Girls 8周年慶典</h1>
+        <p class="text-sm text-sage-600 mt-1 font-medium"><i class="fa-solid fa-location-dot mr-1"></i> Chiang Mai · 清邁小旅行</p>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-md mx-auto px-4 mt-6">
+        
+        <!-- ================= TAB 1: OVERVIEW ================= -->
+        <section id="tab-overview" class="tab-content space-y-6">
+            <!-- 航班資訊 -->
+            <div class="bg-white hand-card p-5">
+                <h3 class="text-lg font-title font-bold text-sage-700 mb-4 flex items-center">
+                    <i class="fa-solid fa-plane-departure mr-2 text-sage-500"></i> 航班資訊 Flight Info
+                </h3>
+                <div class="space-y-3 relative before:absolute before:bottom-2 before:top-2 before:left-3.5 before:w-0.5 before:border-l-2 before:border-dashed before:border-sage-200">
+                    <div class="flex items-start space-x-3 relative">
+                        <div class="w-7 h-7 rounded-full bg-sage-100 flex items-center justify-center border border-sage-500 z-10">
+                            <i class="fa-solid fa-plane text-xs text-sage-600"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-stone-400 font-title">GO · 去程</p>
+                            <p class="font-bold text-stone-700">UO738 <span class="text-sage-600">June 5</span></p>
+                            <p class="text-sm font-semibold text-stone-500 bg-beige-100 px-2 py-0.5 rounded mt-1 inline-block">07:50 ➔ 09:45</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-3 relative">
+                        <div class="w-7 h-7 rounded-full bg-stone-100 flex items-center justify-center border border-stone-400 z-10">
+                            <i class="fa-solid fa-plane text-xs text-stone-500 rotate-180"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-stone-400 font-title">BACK · 回程</p>
+                            <p class="font-bold text-stone-700">UO755 <span class="text-sage-600">June 7</span></p>
+                            <p class="text-sm font-semibold text-stone-500 bg-beige-100 px-2 py-0.5 rounded mt-1 inline-block">19:25 ➔ 23:15</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 住宿資訊 -->
+            <div class="bg-white hand-card p-5">
+                <h3 class="text-lg font-title font-bold text-sage-700 mb-4 flex items-center">
+                    <i class="fa-solid fa-hotel mr-2 text-sage-500"></i> 酒店住宿 Stay
+                </h3>
+                <div class="space-y-4">
+                    <div class="p-3 bg-beige-50 rounded-xl border border-beige-200">
+                        <span class="text-xs font-bold px-2 py-0.5 bg-sage-500 text-white rounded-full font-title">Day 1</span>
+                        <h4 class="font-bold mt-1 text-stone-800">Chai Cheevit Mae Sa</h4>
+                        <p class="text-xs text-stone-500 mt-1"><i class="fa-solid fa-location-dot text-sage-500 mr-1"></i> Mae Rim District, Chiang Mai</p>
+                        <div class="mt-2 pt-2 border-t border-dashed border-stone-200 flex space-x-2">
+                            <a href="https://www.facebook.com/ChaiCheevitMaesa" target="_blank" class="text-xs font-semibold text-sage-600 bg-white border border-sage-500 px-2.5 py-1 rounded-lg flex items-center shadow-sm"><i class="fa-brands fa-facebook mr-1"></i> FB 專頁</a>
+                            <a href="tel:+66614016361" class="text-xs font-semibold text-stone-600 bg-white border border-stone-300 px-2.5 py-1 rounded-lg flex items-center shadow-sm"><i class="fa-solid fa-phone mr-1"></i> 打電話</a>
+                        </div>
+                    </div>
+                    <div class="p-3 bg-beige-50 rounded-xl border border-beige-200">
+                        <span class="text-xs font-bold px-2 py-0.5 bg-sage-600 text-white rounded-full font-title">Day 2</span>
+                        <h4 class="font-bold mt-1 text-stone-800">Villa Alanna</h4>
+                        <p class="text-xs text-stone-500 mt-1"><i class="fa-solid fa-location-dot text-sage-500 mr-1"></i> Si Phum, Mueang Chiang Mai</p>
+                        <div class="mt-2 pt-2 border-t border-dashed border-stone-200 flex space-x-2">
+                            <a href="http://www.villaalanna.com/chiangmai" target="_blank" class="text-xs font-semibold text-sage-600 bg-white border border-sage-500 px-2.5 py-1 rounded-lg flex items-center shadow-sm"><i class="fa-solid fa-earth-americas mr-1"></i> 官網 Website</a>
+                            <a href="tel:+66613505899" class="text-xs font-semibold text-stone-600 bg-white border border-stone-300 px-2.5 py-1 rounded-lg flex items-center shadow-sm"><i class="fa-solid fa-phone mr-1"></i> 打電話</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 老司機推薦路線摘要 -->
+            <div class="bg-sage-50 border-2 border-sage-500 rounded-2xl p-4 shadow-sm">
+                <h4 class="font-title font-bold text-sage-700 flex items-center mb-2"><i class="fa-solid fa-star text-amber-400 mr-1.5 animate-bounce"></i> 最佳推薦行程路線</h4>
+                <ul class="text-xs space-y-1.5 text-stone-600 font-medium">
+                    <li><strong class="text-sage-700">D1：</strong>It’s Good Kitchen ➔ Makkha Spa ➔ 直接返酒店享受</li>
+                    <li><strong class="text-sage-700">D2：</strong>Mon Jam ➔ Villa Check-in ➔ Baan Landai ➔ JJ Market ➔ CMU 夜市 ➔ 按摩</li>
+                    <li><strong class="text-sage-700">D3：</strong>GRAPH Coffee ➔ Khao Soi Maesai ➔ 攞行李 ➔ 出發機場</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: ITINERARY ================= -->
+        <section id="tab-itinerary" class="tab-content hidden space-y-6">
+            <!-- Day 1 -->
+            <div class="space-y-3">
+                <div class="flex items-center space-x-2 bg-sage-500 text-white py-2 px-4 rounded-2xl shadow-sm border-2 border-sage-600">
+                    <span class="font-title font-bold text-lg">Day 1</span>
+                    <span class="text-sm opacity-90 font-medium">🌿 落機 ➔ 食 ➔ Spa ➔ 山上酒店</span>
+                </div>
+                
+                <!-- D1-1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 rounded-full border-2 border-sage-500 text-sage-500 focus:ring-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">09:45</span>
+                        <h4 class="font-bold text-stone-800">到達清邁機場 ✈️</h4>
+                        <p class="text-xs text-stone-500 mt-1">預留時間過 Immigration ＋ Call 車前往市區。</p>
+                    </div>
+                </div>
+
+                <!-- D1-2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">11:30</span>
+                        <h4 class="font-bold text-stone-800">🍽️ Lunch (Spa 附近就腳推薦)</h4>
+                        <div class="mt-2 space-y-2">
+                            <div class="p-2.5 bg-beige-50 rounded-xl border border-dashed border-beige-300">
+                                <p class="text-sm font-bold text-stone-700">1. It’s Good Kitchen</p>
+                                <p class="text-xs text-stone-500">位於 Old Town，去 Spa 超近。泰菜水準穩陣，5個人容易 Share！</p>
+                            </div>
+                            <div class="p-2.5 bg-beige-50 rounded-xl border border-dashed border-beige-300">
+                                <p class="text-sm font-bold text-stone-700">2. Garden to Table Chiangmai</p>
+                                <p class="text-xs text-stone-500">環境偏靚又舒服，適合影相打卡打響頭炮。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D1-3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">13:30–15:00</span>
+                        <h4 class="font-bold text-stone-800">💆‍♀️ Makkha Health & Spa (Colonial Gardens)</h4>
+                        <p class="text-xs text-stone-500 mt-1">最正嘅 Day 1 享受！環境超靚超舒服，即刻洗走搭飛機嘅攰意。</p>
+                        <p class="text-xs text-stone-400 mt-1"><i class="fa-solid fa-map-pin text-rose-400"></i> 4, Soi Sam Lan 2 Phra Sing, Chiang Mai</p>
+                        <div class="mt-2 flex space-x-2">
+                            <a href="https://www.tripadvisor.com/Attraction_Review-g293917-d15662699-Reviews-Makkha_Health_&_Spa_%28Colonial_Gardens%29-Chiang_Mai_Province_Chiang_Mai.html?m=69767" target="_blank" class="text-[11px] bg-sage-50 text-sage-600 px-2 py-1 border border-sage-500 rounded-lg font-medium"><i class="fa-solid fa-compass mr-1"></i> TripAdvisor</a>
+                            <a href="tel:+66654785358" class="text-[11px] bg-stone-50 text-stone-600 px-2 py-1 border border-stone-300 rounded-lg font-medium"><i class="fa-solid fa-phone mr-1"></i> +66 65 478 5358</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D1-4 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">15:00~</span>
+                        <h4 class="font-bold text-stone-800">☕ Spa 後行程（二選一）</h4>
+                        <div class="mt-2 space-y-2">
+                            <div class="p-2.5 bg-sage-50/50 rounded-xl border border-sage-200">
+                                <p class="text-sm font-bold text-sage-700">路線 A (大推) ➔ 直接上山回酒店</p>
+                                <p class="text-xs text-stone-600 font-medium">直奔 <span class="underline">Chai Cheevit Mae Sa</span> 酒店。優點：唔趕時間、可以極致享受酒店風景、喺 Pool 旁邊盡情影相打卡！</p>
+                            </div>
+                            <div class="p-2.5 bg-stone-50 rounded-xl border border-stone-200">
+                                <p class="text-sm font-bold text-stone-700">路線 B ➔ 途中停靠溪流 Café</p>
+                                <p class="text-xs text-stone-500">順路停靠 <strong>WTF Coffee Camp</strong> (山景/溪流感，同 Mae Sa 好 Match)。</p>
+                                <p class="text-[11px] text-stone-400 mt-1">👉 精神好就停45–60分鐘，攰就直接 Skip 走 A 路線！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="space-y-3 pt-4">
+                <div class="flex items-center space-x-2 bg-sage-600 text-white py-2 px-4 rounded-2xl shadow-sm border-2 border-sage-700">
+                    <span class="font-title font-bold text-lg">Day 2</span>
+                    <span class="text-sm opacity-90 font-medium">🏙️ 山區 ➔ Check-in ➔ Fine Dine ➔ JJ ➔ 夜市</span>
+                </div>
+
+                <!-- D2-1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">09:00–11:00</span>
+                        <h4 class="font-bold text-stone-800">🌤️ 山區 Optional Outdoor</h4>
+                        <div class="mt-2 space-y-2">
+                            <div class="p-2.5 bg-beige-50 rounded-xl border border-beige-200">
+                                <p class="text-sm font-bold text-stone-700">1. Mon Jam (夢境山)</p>
+                                <p class="text-xs text-stone-500">酒店過去超順路！有無敵山景、空氣極好、超级殺快門。</p>
+                            </div>
+                            <div class="p-2.5 bg-beige-50 rounded-xl border border-beige-200">
+                                <p class="text-sm font-bold text-stone-700">2. Wild Adventures Chiang Mai</p>
+                                <p class="text-xs text-stone-500">如果想玩得 Active 啲，呢度可以玩 ATV、Zipline 等戶外體驗！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D2-2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">11:00–11:45</span>
+                        <h4 class="font-bold text-stone-800">🚗 車返市中心 Check-in</h4>
+                        <p class="text-xs text-stone-500 mt-1">入住市區的高質感 <strong>Villa Alanna</strong> 酒店放低行李。</p>
+                    </div>
+                </div>
+
+                <!-- D2-3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">12:30–14:00</span>
+                        <h4 class="font-bold text-stone-800">🍽️ Baan Landai Fine Thai Cuisine</h4>
+                        <p class="text-xs text-stone-500 mt-1">精緻精美的泰北料理！而且就在酒店附近，完美順路。</p>
+                    </div>
+                </div>
+
+                <!-- D2-4 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">14:30–17:00</span>
+                        <h4 class="font-bold text-stone-800">🛍️ Jing Jai Market (JJ Market)</h4>
+                        <p class="text-xs text-stone-500 mt-1">清邁最潮的手作市集。買文創小物、慢慢行、飲杯極品咖啡。</p>
+                    </div>
+                </div>
+
+                <!-- D2-5 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">18:00–20:00</span>
+                        <h4 class="font-bold text-stone-800">🌙 清邁大學夜市 CMU Night Market</h4>
+                        <p class="text-xs text-stone-500 mt-1">超好行、平民美食超多的在地夜市，瘋狂開啟掃街模式！</p>
+                    </div>
+                </div>
+
+                <!-- D2-6 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">夜市前後</span>
+                        <h4 class="font-bold text-stone-800">💆‍♀️ 夜市附近放鬆按摩 (二選一)</h4>
+                        <p class="text-xs text-stone-500 mt-1">視乎大家時間，可以行夜市前或行完之後去：</p>
+                        <p class="text-xs text-stone-600 font-medium mt-1">1. <strong>Massage near me 1</strong> (近 Huay Kaew，好方便)</p>
+                        <p class="text-xs text-stone-600 font-medium font-title">2. <strong>Snooze Massage CNX</strong> (網絡評價極高！)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="space-y-3 pt-4">
+                <div class="flex items-center space-x-2 bg-sage-700 text-white py-2 px-4 rounded-2xl shadow-sm border-2 border-sage-700">
+                    <span class="font-title font-bold text-lg">Day 3</span>
+                    <span class="text-sm opacity-90 font-medium">✈️ 泰北麵 ➔ 攞行李 ➔ Airport</span>
+                </div>
+
+                <!-- D3-1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">Morning</span>
+                        <h4 class="font-bold text-stone-800">☕ Breakfast & Coffee</h4>
+                        <p class="text-xs text-stone-500 mt-1">去朝聖超有名的 <strong>GRAPH</strong> 咖啡，或者喺酒店附近 Chill 下。</p>
+                    </div>
+                </div>
+
+                <!-- D3-2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">Lunch</span>
+                        <h4 class="font-bold text-stone-800">🍜 必食！正宗泰北金麵 (Khao Soi)</h4>
+                        <div class="mt-2 space-y-2">
+                            <div class="p-2.5 bg-sage-50 rounded-xl border border-sage-200">
+                                <p class="text-sm font-bold text-sage-700">⭐ 第一推：Khao Soi Maesai</p>
+                                <p class="text-xs text-stone-600 font-medium">最經典、人氣最高！濃郁美味。（強烈推薦）</p>
+                            </div>
+                            <div class="p-2.5 bg-stone-50 rounded-xl border border-stone-200">
+                                <p class="text-sm font-bold text-stone-700">第二推：Khao Soi Arak</p>
+                                <p class="text-xs text-stone-500">近 Old Town，味道同樣非常地道正宗。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- D3-3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-4 shadow-sm flex space-x-3 items-start">
+                    <input type="checkbox" class="mt-1 w-5 h-5 border-2 border-sage-500 text-sage-500 rounded">
+                    <div class="flex-1">
+                        <span class="text-xs font-bold text-sage-600 font-title">Afternoon</span>
+                        <h4 class="font-bold text-stone-800">🧳 攞行李 ➔ 出發機場</h4>
+                        <p class="text-xs text-stone-500 mt-1">返回 <strong>Villa Alanna</strong> 提領行李。</p>
+                        <p class="text-sm font-bold text-rose-500 mt-1.5"><i class="fa-solid fa-triangle-exclamation mr-1"></i> 16:45–17:00 必須出發去機場！</p>
+                        <p class="text-xs text-stone-500">5個人加埋行李，預早少少 Call 大型車比較穩陣安全。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: EXPENSES ================= -->
+        <section id="tab-expenses" class="tab-content hidden space-y-4">
+            <div class="bg-white hand-card p-5">
+                <h3 class="text-lg font-title font-bold text-sage-700 mb-2 flex items-center">
+                    <i class="fa-solid fa-wallet mr-2 text-sage-500"></i> 公數記帳小幫手
+                </h3>
+                <p class="text-xs text-stone-500 mb-4">預設按 <span class="text-sage-600 font-bold">5人</span> 平分。所有數據儲存於手機 LocalStorage。</p>
+                
+                <!-- 新增帳目 Form -->
+                <div class="space-y-3 bg-beige-50 p-3 rounded-xl border border-beige-200 mb-4">
+                    <input type="text" id="exp-title" placeholder="項目名稱 (如：第一餐泰菜)" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-sage-500">
+                    <div class="flex space-x-2">
+                        <input type="number" id="exp-amount" placeholder="金額 (THB ฿)" class="w-1/2 bg-white border border-stone-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-sage-500">
+                        <button onclick="addExpense()" class="w-1/2 bg-sage-500 text-white font-bold hand-btn py-2 text-sm">新增帳目</button>
+                    </div>
+                </div>
+
+                <!-- 總計展示 -->
+                <div class="grid grid-cols-2 gap-3 bg-sage-100 p-3 rounded-xl border border-sage-500 text-center">
+                    <div>
+                        <p class="text-xs font-bold text-sage-700">總支出 (THB)</p>
+                        <p id="total-amount" class="text-xl font-title font-bold text-sage-700">฿0</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold text-sage-700">每人平分 (5人)</p>
+                        <p id="per-person" class="text-xl font-title font-bold text-sage-700">฿0</p>
+                    </div>
+                </div>
+
+                <!-- 列表 -->
+                <div class="mt-4 pt-4 border-t border-stone-200">
+                    <h4 class="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2 font-title">消費明細 History</h4>
+                    <div id="expense-list" class="space-y-2 max-h-60 overflow-y-auto custom-scrollbar">
+                        <!-- 動態插入 -->
+                        <p class="text-xs text-stone-400 text-center py-4">暫時未有記帳資料 🌵</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: MEMO ================= -->
+        <section id="tab-memo" class="tab-content hidden space-y-4">
+            <div class="bg-white hand-card p-5">
+                <h3 class="text-lg font-title font-bold text-sage-700 mb-2 flex items-center">
+                    <i class="fa-solid fa-list-check mr-2 text-sage-500"></i> 自訂備忘 / 打包清單
+                </h3>
+                <p class="text-xs text-stone-500 mb-4">隨手記下要買的手信或行李清單物品。</p>
+                
+                <div class="flex space-x-2 mb-4">
+                    <input type="text" id="memo-input" placeholder="想備忘的事情..." class="flex-1 bg-white border border-stone-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:border-sage-500">
+                    <button onclick="addMemo()" class="bg-sage-600 text-white font-bold hand-btn px-4 text-sm">新增</button>
+                </div>
+
+                <div id="memo-list" class="space-y-2">
+                    <!-- 動態明細 -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar (適合手機單手操作) -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-sage-600 shadow-lg px-4 py-2 flex justify-around z-50 max-w-md mx-auto rounded-t-3xl">
+        <button onclick="switchTab('overview')" id="nav-overview" class="flex flex-col items-center space-y-0.5 text-sage-600 font-bold px-3 py-1">
+            <i class="fa-solid fa-compass text-lg"></i>
+            <span class="text-[10px]">總覽</span>
+        </button>
+        <button onclick="switchTab('itinerary')" id="nav-itinerary" class="flex flex-col items-center space-y-0.5 text-stone-400 px-3 py-1">
+            <i class="fa-solid fa-calendar-days text-lg"></i>
+            <span class="text-[10px]">行程</span>
+        </button>
+        <button onclick="switchTab('expenses')" id="nav-expenses" class="flex flex-col items-center space-y-0.5 text-stone-400 px-3 py-1">
+            <i class="fa-solid fa-wallet text-lg"></i>
+            <span class="text-[10px]">公數記帳</span>
+        </button>
+        <button onclick="switchTab('memo')" id="nav-memo" class="flex flex-col items-center space-y-0.5 text-stone-400 px-3 py-1">
+            <i class="fa-solid fa-clipboard-list text-lg"></i>
+            <span class="text-[10px]">自訂清單</span>
+        </button>
+    </nav>
+
+    <!-- Core JavaScript logic -->
+    <script>
+        // ---------------- TAB SWITCHING ----------------
+        function switchTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            // Show target content
+            document.getElementById(tab-${tabId}).classList.remove('hidden');
+            
+            // Reset nav colors
+            document.querySelectorAll('nav button').forEach(btn => {
+                btn.classList.remove('text-sage-600', 'font-bold');
+                btn.classList.add('text-stone-400');
+            });
+            // Highlight active nav
+            const activeBtn = document.getElementById(nav-${tabId});
+            activeBtn.classList.remove('text-stone-400');
+            activeBtn.classList.add('text-sage-600', 'font-bold');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ---------------- EXPENSES LOGIC ----------------
+        let expenses = JSON.parse(localStorage.getItem('girls8_expenses')) || [];
+
+        function saveExpenses() {
+            localStorage.setItem('girls8_expenses', JSON.stringify(expenses));
+            renderExpenses();
+        }
+
+        function addExpense() {
+            const titleInput = document.getElementById('exp-title');
+            const amountInput = document.getElementById('exp-amount');
+            
+            if(!titleInput.value.trim() || !amountInput.value) return;
+
+            const newExp = {
+                id: Date.now(),
+                title: titleInput.value.trim(),
+                amount: parseFloat(amountInput.value)
+            };
+
+            expenses.push(newExp);
+            titleInput.value = '';
+            amountInput.value = '';
+            saveExpenses();
+        }
+
+        function deleteExpense(id) {
+            expenses = expenses.filter(item => item.id !== id);
+            saveExpenses();
+        }
+
+        function renderExpenses() {
+            const listEl = document.getElementById('expense-list');
+            const totalEl = document.getElementById('total-amount');
+            const perEl = document.getElementById('per-person');
+            
+            if(expenses.length === 0) {
+                listEl.innerHTML = <p class="text-xs text-stone-400 text-center py-4">暫時未有記帳資料 🌵</p>;
+                totalEl.innerText = '฿0';
+                perEl.innerText = '฿0';
+                return;
+            }
+
+            let total = 0;
+            listEl.innerHTML = '';
+            
+            expenses.forEach(item => {
+                total += item.amount;
+                listEl.innerHTML += `
+                    <div class="flex justify-between items-center bg-stone-50 p-2.5 rounded-xl border border-stone-200">
+                        <div>
+                            <p class="text-sm font-bold text-stone-700">${item.title}</p>
+                            <p class="text-[10px] text-stone-400">${new Date(item.id).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="font-title font-bold text-sage-600 text-sm">฿${item.amount}</span>
+                            <button onclick="deleteExpense(${item.id})" class="text-stone-300 hover:text-rose-500 transition-colors"><i class="fa-solid fa-trash-can text-xs"></i></button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            totalEl.innerText = ฿${total.toFixed(0)};
+            perEl.innerText = ฿${(total / 5).toFixed(0)};
+        }
+
+        // ---------------- MEMO LOGIC ----------------
+        let memos = JSON.parse(localStorage.getItem('girls8_memos')) || [
+            { id: 1, text: '帶防蚊液 / 蚊怕水 🦟', done: false },
+            { id: 2, text: '準備泰銖現金 ฿', done: true },
+            { id: 3, text: '填寫泰國電子入境卡 📝', done: false }
+        ];
+
+        function saveMemos() {
+            localStorage.setItem('girls8_memos', JSON.stringify(memos));
+            renderMemos();
+        }
+
+        function addMemo() {
+            const input = document.getElementById('memo-input');
+            if(!input.value.trim()) return;
+
+            memos.push({
+                id: Date.now(),
+                text: input.value.trim(),
+                done: false
+            });
+            input.value = '';
+            saveMemos();
+        }
+
+        function toggleMemo(id) {
+            memos = memos.map(item => item.id === id ? { ...item, done: !item.done } : item);
+            saveMemos();
+        }
+
+        function deleteMemo(id) {
+            memos = memos.filter(item => item.id !== id);
+            saveMemos();
+        }
+
+        function renderMemos() {
+            const listEl = document.getElementById('memo-list');
+            if(memos.length === 0) {
+                listEl.innerHTML = <p class="text-xs text-stone-400 text-center py-4">清單空空如也 ✨</p>;
+                return;
+            }
+
+            listEl.innerHTML = '';
+            memos.forEach(item => {
+                listEl.innerHTML += `
+                    <div class="flex items-center justify-between p-3 bg-stone-50 rounded-xl border border-stone-200 ${item.done ? 'opacity-50 line-through' : ''}">
+                        <div class="flex items-center space-x-3 flex-1" onclick="toggleMemo(${item.id})">
+                            <input type="checkbox" ${item.done ? 'checked' : ''} class="w-4 h-4 text-sage-500 border-stone-300 rounded focus:ring-sage-500">
+                            <span class="text-sm font-medium text-stone-700">${item.text}</span>
+                        </div>
+                        <button onclick="deleteMemo(${item.id})" class="text-stone-300 hover:text-rose-500 ml-2"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                `;
+            });
+        }
+
+        // ---------------- INITIALIZATION ----------------
+        window.onload = function() {
+            renderExpenses();
+            renderMemos();
+        };
+    </script>
+</body>
+</html>
